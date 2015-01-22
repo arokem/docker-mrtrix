@@ -20,4 +20,4 @@ RUN apt-get install -y git
 RUN git clone https://github.com/jdtournier/mrtrix3.git
 RUN cd mrtrix3 && ./configure
 RUN cd mrtrix3 && ./build
-#RUN export PATH=/mrtrix3/bin:$PATH
+RUN export PATH=/mrtrix3/bin:$PATH
