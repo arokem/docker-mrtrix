@@ -1,22 +1,22 @@
 # arokem/mrtrix
 FROM ubuntu:14.04
 MAINTAINER Ariel Rokem <arokem@gmail.com>
-RUN apt-get update
-RUN apt-get install -y build-essential
-RUN apt-get install -y mesa-common-dev
-RUN apt-get install -y libglu1-mesa-dev
-RUN apt-get install -y g++ 
-RUN apt-get install -y python
-RUN apt-get install -y libgtk2.0-dev
-RUN apt-get install -y libglib2.0-dev
-RUN apt-get install -y libglibmm-2.4-dev
-RUN apt-get install -y libgtkmm-2.4-dev
-RUN apt-get install -y libgtkglext1-dev
-RUN apt-get install -y libgsl0-dev
-RUN apt-get install -y libgl1-mesa-dev 
-RUN apt-get install -y qt5-default
-RUN apt-get install -y libqt5svg5*
-RUN apt-get install -y git
+RUN apt-get update && apt-get install -y \
+build-essential \
+mesa-common-dev \
+libglu1-mesa-dev \
+g++ \
+python \
+libgtk2.0-dev \
+libglib2.0-dev \
+libglibmm-2.4-dev \
+libgtkmm-2.4-dev \
+libgtkglext1-dev \
+libgsl0-dev \
+libgl1-mesa-dev \
+qt5-default \
+libqt5svg5* \
+git
 RUN git clone https://github.com/jdtournier/mrtrix3.git
 RUN cd mrtrix3 && ./configure
 RUN cd mrtrix3 && ./build
